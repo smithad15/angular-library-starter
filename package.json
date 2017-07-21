@@ -1,0 +1,45 @@
+{
+  "name": "angular-library-starter",
+  "version": "0.1.0",
+  "description": "Starter for libraries to be consumed by Angular",
+  "module": "dist/angular-library-starter.js",
+  "repository": "git@github.com:smithad15/angular-library-starter.git",
+  "author": "Andrew Smith <smithad15@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.9"
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "npm-run-all clean compile flatten copy-build",
+    "clean": "rimraf dist build",
+    "compile": "ngc -p tsconfig.json",
+    "flatten": "rollup -c",
+    "copy-build": "cpy \"**/*.*\" \"!**/*.js\" \"../dist\" --cwd=build --parents --no-overwrite",
+    "prettify": "prettier --single-quote --write --trailing-comma=all \"**/*.(ts|js|css|json)\"",
+    "lint": "npm-run-all lint:*",
+    "lint:ts": "tslint -p tsconfig.json",
+    "lint:prettier": "prettier --single-quote -l --trailing-comma=all \"**/*.(ts|js|css|json)\""
+  },
+  "peerDependencies": {
+    "@angular/core": "^4.3.1",
+    "rxjs": "^5.4.2",
+    "zone.js": "^0.8.14"
+  },
+  "devDependencies": {
+    "@angular/compiler": "^4.3.1",
+    "@angular/compiler-cli": "^4.3.1",
+    "@angular/core": "^4.3.1",
+    "codelyzer": "^3.1.2",
+    "cpy-cli": "^1.0.1",
+    "npm-run-all": "^4.0.2",
+    "prettier": "^1.5.3",
+    "rollup": "^0.45.2",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rxjs": "^5.4.2",
+    "tslint": "^5.5.0",
+    "typescript": "^2.4.2",
+    "zone.js": "^0.8.14"
+  }
+}
