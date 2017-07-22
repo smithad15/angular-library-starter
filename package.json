@@ -11,7 +11,7 @@
     "node": ">=8"
   },
   "scripts": {
-    "prepublish": "npm-run-all lint build",
+    "prepublishOnly": "npm-run-all lint build",
     "prebuild": "npm run clean",
     "build": "npm-run-all build:*",
     "build:es5": "npm-run-all clean:build compile:es5 flatten:es5 copy-build",
