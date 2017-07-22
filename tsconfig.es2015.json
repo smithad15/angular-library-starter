@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "es2015"
+  },
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": true,
+    "flatModuleOutFile": "angular-library-starter.es2015.js",
+    "flatModuleId": "angular-library-starter",
+    "annotateForClosureCompiler": true
+  },
+  "files": [
+    "src/index.ts"
+  ]
+}
