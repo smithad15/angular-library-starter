@@ -6,4 +6,4 @@ import { HelloComponent } from './hello.component';
   declarations: [HelloComponent],
   exports: [HelloComponent],
 })
-export class AppModule {}
+export class HelloModule {}

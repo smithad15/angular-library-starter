@@ -20,12 +20,18 @@ Of course, you will probably not want to have `angular-library-starter` be your 
 - `package.json`
   - `name`
   - `module` path
+  - `es2015` path
+  - `typings` path
 - `tsconfig.json` and `tsconfig.es2015.json`
   - `angularCompilerOptions`
     - `flatModuleOutFile`
     - `flatModuleId`
 
 Any packages that you include in your `peerDependencies` will not be included in your published bundle automatically.
+
+## Publishing Your Package
+
+This repo has been designed to be published on npm. It is recommended to use the procedure described [here](https://docs.npmjs.com/getting-started/publishing-npm-packages). For release note tracking, it is recommended to use GitHub's releases feature due to the extra niceties that come along with it (easy release note management, automatic source code bundling, etc.)
 
 ## Scripts
 - `npm run build`: Run through the entire build process
