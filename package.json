@@ -25,6 +25,7 @@
     "flatten:es2015": "rollup -c rollup.config.es2015.js",
     "copy-build": "cpy \"**/*.*\" \"!**/*.js\" \"../dist\" --cwd=build --parents --no-overwrite",
     "prettify": "prettier --single-quote --write --trailing-comma=all \"!(dist|build)/**/*.(ts|js|css|json)\"",
+    "precommit": "lint-staged",
     "lint": "npm-run-all lint:*",
     "lint:ts": "tslint -p tsconfig.json",
     "lint:prettier": "prettier --single-quote -l --trailing-comma=all \"!(dist|build)/**/*.(ts|js|css|json)\"",
@@ -38,8 +39,8 @@
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
-    "@angular/compiler": "4.3.6",
     "@angular/common": "4.3.6",
+    "@angular/compiler": "4.3.6",
     "@angular/compiler-cli": "4.3.6",
     "@angular/core": "4.3.6",
     "@angular/platform-browser": "4.3.6",
@@ -47,8 +48,10 @@
     "@types/jest": "^20.0.8",
     "codelyzer": "^3.1.2",
     "cpy-cli": "^1.0.1",
+    "husky": "^0.14.3",
     "jest": "^20.0.4",
     "jest-zone-patch": "^0.0.7",
+    "lint-staged": "^4.0.4",
     "npm-run-all": "^4.0.2",
     "prettier": "^1.5.3",
     "rollup": "^0.45.2",
@@ -59,5 +62,8 @@
     "tslint": "^5.5.0",
     "typescript": "^2.4.2",
     "zone.js": "^0.8.14"
+  },
+  "lint-staged": {
+    "*.+(js|ts|css|json)": ["prettify", "git add"]
   }
 }
