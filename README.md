@@ -13,6 +13,8 @@ This starter lays out a project structure for libraries that are to be consumed 
 - Code can be consumed by AOT
 - Tree Shakeable
 - Support for Closure Compiler
+- Unit testing and code coverage with Jest
+- Basic CircleCI 2.0 config
 
 ## Getting Started
 
@@ -39,6 +41,9 @@ This repo has been designed to be published on npm. It is recommended to use the
 - `npm run build`: Run through the entire build process
 - `npm run lint`: Runs all linters
 - `npm run prettify`: Runs prettier over the entire codebase
+- `npm test`: Runs the unit test suite with code coverage
+- `npm run test:watch`: Runs the unit test suite in watch mode
+- `npm run clean`: Removes build artifacts
 
 ## Resources
 - [Angular Package Format v4](https://docs.google.com/document/d/1CZC2rcpxffTDfRDs6p1cfbmKNLA6x5O-NtkJglDaBVs/preview)
