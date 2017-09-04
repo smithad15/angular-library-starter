@@ -1,5 +1,7 @@
 # Angular Library Starter
 
+[![CircleCI](https://circleci.com/gh/smithad15/angular-library-starter.svg?style=svg)](https://circleci.com/gh/smithad15/angular-library-starter)
+
 This starter lays out a project structure for libraries that are to be consumed by Angular. It will output files that correspond to the Angular Package Format.
 
 ## Features
