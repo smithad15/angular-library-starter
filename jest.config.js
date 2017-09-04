@@ -1,3 +1,6 @@
+// Jest JUnit Reporter config
+process.env.TEST_REPORT_PATH = './coverage';
+
 module.exports = {
   globals: {
     __TRANSFORM_HTML__: true,
@@ -13,6 +16,7 @@ module.exports = {
       '<rootDir>/jest/file.mock.ts',
     '\\.(css|less)$': '<rootDir>/jest/style.mock.ts',
   },
+  testResultsProcessor: './node_modules/jest-junit-reporter',
   mapCoverage: true,
   collectCoverageFrom: [
     '**/src/**/*.{ts,js}',

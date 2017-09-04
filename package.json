@@ -11,7 +11,8 @@
     "node": ">=8"
   },
   "scripts": {
-    "prepublishOnly": "npm-run-all lint build",
+    "ci": "npm-run-all lint test:ci",
+    "prepublishOnly": "npm-run-all lint test build",
     "prebuild": "npm run clean",
     "build": "npm-run-all build:*",
     "build:es5": "npm-run-all clean:build compile:es5 flatten:es5 copy-build",
@@ -29,8 +30,8 @@
     "lint": "npm-run-all lint:*",
     "lint:ts": "tslint -p tsconfig.json",
     "lint:prettier": "prettier --single-quote -l --trailing-comma=all \"!(dist|build)/**/*.(ts|js|css|json)\"",
-    "test": "npm-run-all lint test:single",
-    "test:single": "jest --coverage",
+    "test": "jest --coverage",
+    "test:ci": "jest --coverage --ci --runInBand",
     "test:watch": "jest --watch"
   },
   "peerDependencies": {
@@ -50,6 +51,7 @@
     "cpy-cli": "^1.0.1",
     "husky": "^0.14.3",
     "jest": "^20.0.4",
+    "jest-junit-reporter": "^1.1.0",
     "jest-zone-patch": "^0.0.7",
     "lint-staged": "^4.0.4",
     "npm-run-all": "^4.0.2",
