@@ -52,7 +52,7 @@
     "cpy-cli": "^1.0.1",
     "husky": "^0.14.3",
     "jest": "^20.0.4",
-    "jest-junit-reporter": "^1.1.0",
+    "jest-junit": "^3.0.0",
     "jest-zone-patch": "^0.0.7",
     "lint-staged": "^4.0.4",
     "npm-run-all": "^4.0.2",

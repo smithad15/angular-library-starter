@@ -1,5 +1,7 @@
+'use strict';
+
 // Jest JUnit Reporter config
-process.env.TEST_REPORT_PATH = './coverage';
+process.env.JEST_JUNIT_OUTPUT = './coverage/test-report.xml';
 
 module.exports = {
   globals: {
@@ -16,7 +18,7 @@ module.exports = {
       '<rootDir>/jest/file.mock.ts',
     '\\.(css|less)$': '<rootDir>/jest/style.mock.ts',
   },
-  testResultsProcessor: './node_modules/jest-junit-reporter',
+  testResultsProcessor: 'jest-junit',
   mapCoverage: true,
   collectCoverageFrom: [
     '**/src/**/*.{ts,js}',
