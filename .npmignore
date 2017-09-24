@@ -1,3 +1,7 @@
+.circleci
 build
+coverage
 src
+jest
 yarn-error.log
+jest.config.js
