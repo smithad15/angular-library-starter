@@ -4,6 +4,7 @@
   "description": "Starter for libraries to be consumed by Angular",
   "module": "dist/angular-library-starter.js",
   "es2015": "dist/angular-library-starter.es2015.js",
+  "typings": "dist/angular-library-starter.d.ts",
   "repository": "git@github.com:smithad15/angular-library-starter.git",
   "author": "Andrew Smith <smithad15@gmail.com>",
   "license": "MIT",
